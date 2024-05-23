@@ -46,4 +46,4 @@ def main():
     print("Thank you for using Book of Mormon Summary Tool!")
 
 if __name__ == "__main__":
-    main()
+    main() 
