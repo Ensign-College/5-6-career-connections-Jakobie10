@@ -1,5 +1,5 @@
-import requests
-import json
+import requests 
+import json 
 
 base_url = 'https://openscriptureapi.org/api/scriptures/v1/lds/en/volume/bookofmormon/'
 
@@ -9,11 +9,11 @@ def get_chapter_summary(book, chapter):
         response = requests.get(url)
         response.raise_for_status()  # Raise an HTTPError if the HTTP request returned an unsuccessful status code
         
-        data = response.json() 
+        data = response.json()
         summary = data.get('chapter', {}).get('summary')
         
         if summary:
-            return summary 
+            return summary
         else:
             print("No summary available for this chapter.")
             return None
@@ -45,5 +45,5 @@ def main():
     
     print("Thank you for using Book of Mormon Summary Tool!")
 
-if __name__ == "__main__":
-    main() 
+# Directly calling the main function
+main() 
